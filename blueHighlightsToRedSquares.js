@@ -1,4 +1,4 @@
-/* Convert all highlights to red squares */
+/* Convert blue highlights to red squares */
 
 var oDoc = event.target;
 var aAnnts = oDoc.getAnnots();
