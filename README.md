@@ -1,2 +1,5 @@
 # highlights_to_squares
-Convert all highlights to red squares
+Contains the following scripts:
+
+- Convert all highlights to red squares
+- Convert blue highlights to red squares
