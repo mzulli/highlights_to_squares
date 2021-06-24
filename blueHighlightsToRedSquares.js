@@ -1,14 +1,25 @@
 /* Convert blue highlights to red squares */
 
-var oDoc = event.target;
-var aAnnts = oDoc.getAnnots();
-
-for (var i = 0; i < aAnnts.length; i++) {
-    if (aAnnts[i].type == "Highlight" &&
-        aAnnts[i].strokeColor == color.cyan) {
-        aAnnts[i].type = "Square";
-        aAnnts[i].style = "S";
-        aAnnts[i].fillColor = color.transparent;
-        aAnnts[i].strokeColor = color.red;
+try {
+    this.syncAnnotScan();
+    for (var nPage = 0; nPage < thisnumPages; nPage++) {
+        // get all annotations on the page
+        var Annots = this.getAnnots(
+            { nPage: nPage }
+        );
+        // process each annotation
+        if (Annots != null) {
+            for (var i = 0; i < Annots.length; i++) {
+                if (Annots[i].type == "Highlight" && Annots[i].strokeColor == color.cyan) {
+                    Annots[i].type = "Square";
+                    Annots[i].style = "S";
+                    Annots[i].fillColor = color.transparent;
+                    Annots[i].strokeColor = color.red;
+                }
+            }
+        }
     }
+}
+catch (e) {
+    applicationCache.alert(e);
 }
