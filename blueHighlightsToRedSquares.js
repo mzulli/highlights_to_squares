@@ -4,7 +4,7 @@ var oDoc = event.target;
 var aAnnts = oDoc.getAnnots();
 
 for (var i = 0; i < aAnnts.length; i++) {
-    if (aAnnts[i].type == "Highlight" && color.equal(aAnnts[i].strokeColor, color.cyan) {
+    if (aAnnts[i].type == "Highlight" && color.equal(aAnnts[i].strokeColor, color.cyan)) {
         aAnnts[i].type = "Square";
         aAnnts[i].style = "S";
         aAnnts[i].fillColor = color.transparent;
