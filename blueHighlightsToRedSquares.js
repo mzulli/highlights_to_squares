@@ -25,3 +25,5 @@ for (var i = 0; i < aAnnts.length; i++) {
         aAnnts[i].strokeColor = color.red;
     }
 }
+
+// annots[i].strokeColor = [ "RGB", 193/255, 254/255, 193/255 ];
